@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thales Lopes | Portfolio</title>
+    
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
+
+    <style>
+        /* Variáveis de cores para facilitar mudanças rápidas no tema */
+        :root {
+            --bg: #0f172a; /* Azul marinho muito escuro para o fundo */
+            --card-bg: rgba(30, 41, 59, 0.7); /* Azul acinzentado com 70% de opacidade */
+            --accent: #38bdf8; /* Azul claro para links e detalhes */
+            --text: #f1f5f9; /* Branco acinzentado para o texto principal */
+        }
+
+        /* Estilos globais do corpo da página */
+        body {
+            background-color: var(--bg); /* Aplica o fundo escuro */
+            color: var(--text); /* Aplica a cor do texto */
+            font-family: 'Inter', sans-serif; /* Define a fonte principal */
+            margin: 0; /* Remove margens indesejadas */
+            line-height: 1.6; /* Melhora o espaçamento das linhas de texto */
+        }
+
+        /* Container que centraliza o site e limita a largura no PC */
+        .container {
+            max-width: 1100px;
+            margin: 0 auto; /* Centraliza horizontalmente */
+            padding: 40px 20px;
+        }
+
+        /* Estilo da seção de introdução (Topo do site) */
+        header {
+            text-align: center;
+            padding: 80px 0;
+        }
+
+        /* Título principal (Seu nome) */
+        h1 { 
+            font-size: 3.5rem; 
+            margin-bottom: 10px; 
+            font-weight: 800; 
+        }
+
+        /* Classe para colorir apenas o sobrenome ou palavras chaves */
+        .highlight { color: var(--accent); }
+
+        /* Descrição logo abaixo do nome */
+        .subtitle { 
+            font-size: 1.2rem; 
+            opacity: 0.8; 
+            max-width: 700px; 
+            margin: 0 auto; 
+        }
+
+        /* --- CONFIGURAÇÃO DE CORES DOS TÍTULOS (SEU PEDIDO) --- */
+        .title-reuni { color: #a78bfa; }   /* Roxo para Inteligência Artificial */
+        .title-angular { color: #f87171; } /* Vermelho para o Framework Angular */
+        .title-design { color: #fb7185; }  /* Rosa para Projetos de UI/UX */
+        .title-game { color: #fbbf24; }    /* Amarelo/Laranja para Game Dev */
+        .title-corp { color: #34d399; }    /* Verde para Design Corporativo */
+
+        /* Sistema de grade para organizar os cards dos projetos */
+        .projects-grid {
+            display: grid;
+            /* Cria colunas flexíveis: mínimo 320px, máximo preencher o espaço */
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 30px; /* Espaço entre os cards */
+            margin-top: 60px;
+        }
+
+        /* Estilo dos Cards (Efeito Glassmorphism/Vidro) */
+        .card {
+            background: var(--card-bg);
+            backdrop-filter: blur(12px); /* Embaça o que estiver atrás do card */
+            border: 1px solid rgba(255, 255, 255, 0.1); /* Borda fina e semi-transparente */
+            border-radius: 20px;
+            padding: 30px;
+            transition: all 0.3s ease; /* Suaviza animações de hover */
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between; /* Empurra o botão para o final do card */
+        }
+
+        /* Efeito ao passar o mouse por cima do card */
+        .card:hover {
+            transform: translateY(-10px); /* Move o card um pouco para cima */
+            border-color: var(--accent); /* Muda a cor da borda */
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3); /* Adiciona uma sombra suave */
+        }
+
+        /* Estilo dos títulos dentro dos cards */
+        .card h3 { 
+            margin: 15px 0 10px 0; 
+            font-size: 1.5rem; 
+        }
+
+        /* Estilo da descrição curta dentro do card */
+        .card p { 
+            font-size: 0.95rem; 
+            opacity: 0.8; 
+            margin-bottom: 25px; 
+        }
+
+        /* Estilo das etiquetas (Tags) coloridas no topo dos cards */
+        .tag {
+            display: inline-block;
+            background: rgba(255, 255, 255, 0.05);
+            padding: 5px 14px;
+            border-radius: 30px;
+            font-size: 0.7rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        /* Estilo dos botões/links de ação */
+        .btn {
+            text-decoration: none;
+            color: var(--text);
+            font-weight: 600;
+            font-size: 0.9rem;
+            border-bottom: 2px solid currentColor; /* Linha na cor do texto do botão */
+            align-self: flex-start;
+            transition: opacity 0.2s;
+        }
+
+        /* Efeito de hover no botão */
+        .btn:hover { opacity: 0.6; }
+
+        /* Estilo do rodapé */
+        footer {
+            text-align: center;
+            margin-top: 100px;
+            padding-bottom: 50px;
+            opacity: 0.6;
+            font-size: 0.9rem;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <header>
+        <h1>Thales <span class="highlight">Lopes</span></h1>
+        <p class="subtitle">
+            Estudante de Análise e Desenvolvimento de Sistemas & Designer Multimídia. <br>
+            Unindo código robusto com design de interface intuitivo.
+        </p>
+    </header>
+
+    <section class="projects-grid">
+        
+        <div class="card">
+            <div>
+                <span class="tag" style="color: #a78bfa;">IA & UX Design</span>
+                <h3 class="title-reuni">Reuni.ai</h3>
+                <p>Protótipo de SaaS para gestão de reuniões com IA. Focado em automação de atas e experiência do usuário.</p>
+            </div>
+            <a href="https://www.figma.com/proto/W8HtM2DGUeHWCAe2vPwPrM/Reuni.ai" target="_blank" class="btn">Ver Protótipo →</a>
+        </div>
+
+        <div class="card">
+            <div>
+                <span class="tag" style="color: #f87171;">Angular Framework</span>
+                <h3 class="title-angular">Floricultura E-commerce</h3>
+                <p>Aplicação completa em Angular com sistema de carrinho, componentes dinâmicos e simulação de backend.</p>
+            </div>
+            <a href="https://github.com/" target="_blank" class="btn">Ver Código no GitHub →</a>
+        </div>
+
+        <div class="card">
+            <div>
+                <span class="tag" style="color: #fb7185;">UI Redesign</span>
+                <h3 class="title-design">Drudge Report</h3>
+                <p>Estudo de caso de redesign focado em modernização de portal de notícias e hierarquia visual.</p>
+            </div>
+            <a href="https://www.figma.com/proto/H1iijpK2AcR6j9pZucTv6J/Redesign-Drudge-Report" target="_blank" class="btn">Ver Redesign →</a>
+        </div>
+
+        <div class="card">
+            <div>
+                <span class="tag" style="color: #fbbf24;">Game Development</span>
+                <h3 class="title-game">Quebrando LeBron James</h3>
+                <p>Web game focado em lógica de programação, mecânicas de plataforma e pixel art original.</p>
+            </div>
+            <a href="https://baleslalala.itch.io/quebrando-lebron-james" target="_blank" class="btn">Jogar Agora →</a>
+        </div>
+
+        <div class="card">
+            <div>
+                <span class="tag" style="color: #34d399;">Branding & Design</span>
+                <h3 class="title-corp">Apresentação Bio Ritmo</h3>
+                <p>Criação de identidade visual e material de apresentação estratégica para o setor corporativo.</p>
+            </div>
+            <a href="https://www.canva.com/design/DAG-Yfjla3w/view" target="_blank" class="btn">Ver Apresentação →</a>
+        </div>
+
+    </section>
+
+    <footer>
+        <p>Desenvolvido por Thales Lopes — 2026</p>
+        <p style="margin-top: 10px;">
+            <a href="https://linkedin.com/in/" target="_blank" style="color: var(--accent); text-decoration: none;">LinkedIn</a> | 
+            <a href="https://github.com/" target="_blank" style="color: var(--accent); text-decoration: none;">GitHub</a>
+        </p>
+    </footer>
+</div>
+
+</body>
+</html>
