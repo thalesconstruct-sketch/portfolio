@@ -3,212 +3,130 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Thales Lopes | Portfolio</title>
-    
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
-
+    <title>Thales Lopes | Portfólio Tech & Design</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
-        /* Variáveis de cores para facilitar mudanças rápidas no tema */
-        :root {
-            --bg: #0f172a; /* Azul marinho muito escuro para o fundo */
-            --card-bg: rgba(30, 41, 59, 0.7); /* Azul acinzentado com 70% de opacidade */
-            --accent: #38bdf8; /* Azul claro para links e detalhes */
-            --text: #f1f5f9; /* Branco acinzentado para o texto principal */
-        }
-
-        /* Estilos globais do corpo da página */
-        body {
-            background-color: var(--bg); /* Aplica o fundo escuro */
-            color: var(--text); /* Aplica a cor do texto */
-            font-family: 'Inter', sans-serif; /* Define a fonte principal */
-            margin: 0; /* Remove margens indesejadas */
-            line-height: 1.6; /* Melhora o espaçamento das linhas de texto */
-        }
-
-        /* Container que centraliza o site e limita a largura no PC */
-        .container {
-            max-width: 1100px;
-            margin: 0 auto; /* Centraliza horizontalmente */
-            padding: 40px 20px;
-        }
-
-        /* Estilo da seção de introdução (Topo do site) */
-        header {
-            text-align: center;
-            padding: 80px 0;
-        }
-
-        /* Título principal (Seu nome) */
-        h1 { 
-            font-size: 3.5rem; 
-            margin-bottom: 10px; 
-            font-weight: 800; 
-        }
-
-        /* Classe para colorir apenas o sobrenome ou palavras chaves */
-        .highlight { color: var(--accent); }
-
-        /* Descrição logo abaixo do nome */
-        .subtitle { 
-            font-size: 1.2rem; 
-            opacity: 0.8; 
-            max-width: 700px; 
-            margin: 0 auto; 
-        }
-
-        /* --- CONFIGURAÇÃO DE CORES DOS TÍTULOS (SEU PEDIDO) --- */
-        .title-reuni { color: #a78bfa; }   /* Roxo para Inteligência Artificial */
-        .title-angular { color: #f87171; } /* Vermelho para o Framework Angular */
-        .title-design { color: #fb7185; }  /* Rosa para Projetos de UI/UX */
-        .title-game { color: #fbbf24; }    /* Amarelo/Laranja para Game Dev */
-        .title-corp { color: #34d399; }    /* Verde para Design Corporativo */
-
-        /* Sistema de grade para organizar os cards dos projetos */
-        .projects-grid {
-            display: grid;
-            /* Cria colunas flexíveis: mínimo 320px, máximo preencher o espaço */
-            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-            gap: 30px; /* Espaço entre os cards */
-            margin-top: 60px;
-        }
-
-        /* Estilo dos Cards (Efeito Glassmorphism/Vidro) */
-        .card {
-            background: var(--card-bg);
-            backdrop-filter: blur(12px); /* Embaça o que estiver atrás do card */
-            border: 1px solid rgba(255, 255, 255, 0.1); /* Borda fina e semi-transparente */
-            border-radius: 20px;
-            padding: 30px;
-            transition: all 0.3s ease; /* Suaviza animações de hover */
-            display: flex;
-            flex-direction: column;
-            justify-content: space-between; /* Empurra o botão para o final do card */
-        }
-
-        /* Efeito ao passar o mouse por cima do card */
-        .card:hover {
-            transform: translateY(-10px); /* Move o card um pouco para cima */
-            border-color: var(--accent); /* Muda a cor da borda */
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3); /* Adiciona uma sombra suave */
-        }
-
-        /* Estilo dos títulos dentro dos cards */
-        .card h3 { 
-            margin: 15px 0 10px 0; 
-            font-size: 1.5rem; 
-        }
-
-        /* Estilo da descrição curta dentro do card */
-        .card p { 
-            font-size: 0.95rem; 
-            opacity: 0.8; 
-            margin-bottom: 25px; 
-        }
-
-        /* Estilo das etiquetas (Tags) coloridas no topo dos cards */
-        .tag {
-            display: inline-block;
-            background: rgba(255, 255, 255, 0.05);
-            padding: 5px 14px;
-            border-radius: 30px;
-            font-size: 0.7rem;
-            font-weight: 700;
-            text-transform: uppercase;
-            letter-spacing: 1px;
-        }
-
-        /* Estilo dos botões/links de ação */
-        .btn {
-            text-decoration: none;
-            color: var(--text);
-            font-weight: 600;
-            font-size: 0.9rem;
-            border-bottom: 2px solid currentColor; /* Linha na cor do texto do botão */
-            align-self: flex-start;
-            transition: opacity 0.2s;
-        }
-
-        /* Efeito de hover no botão */
-        .btn:hover { opacity: 0.6; }
-
-        /* Estilo do rodapé */
-        footer {
-            text-align: center;
-            margin-top: 100px;
-            padding-bottom: 50px;
-            opacity: 0.6;
-            font-size: 0.9rem;
-        }
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap');
+        body { font-family: 'Inter', sans-serif; scroll-behavior: smooth; }
+        .gradient-bg { background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%); }
+        .project-card { transition: all 0.3s ease; border: 1px solid #e5e7eb; display: flex; flex-direction: column; height: 100%; }
+        .project-card:hover { transform: translateY(-8px); border-color: #3b82f6; box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1); }
     </style>
 </head>
-<body>
+<body class="bg-slate-50 text-slate-900">
 
-<div class="container">
-    <header>
-        <h1>Thales <span class="highlight">Lopes</span></h1>
-        <p class="subtitle">
-            Estudante de Análise e Desenvolvimento de Sistemas & Designer Multimídia. <br>
-            Unindo código robusto com design de interface intuitivo.
-        </p>
+    <header class="gradient-bg text-white py-24 px-6 text-center">
+        <div class="max-w-4xl mx-auto">
+            <h1 class="text-5xl md:text-7xl font-extrabold mb-6 tracking-tight">Thales Lopes</h1>
+            <p class="text-xl md:text-2xl text-blue-300 font-light mb-10 text-balance">
+                ADS Student | Multimedia Designer | Junior Sales Consultant
+            </p>
+            <div class="flex flex-wrap justify-center gap-4">
+                <a href="#projetos" class="bg-blue-600 hover:bg-blue-700 text-white px-8 py-4 rounded-full font-bold transition-all shadow-lg shadow-blue-900/20">Ver Projetos</a>
+                <a href="https://www.linkedin.com/in/thales-lopes-a1397b245" target="_blank" class="border border-slate-500 hover:bg-white hover:text-slate-900 px-8 py-4 rounded-full font-bold transition-all">LinkedIn</a>
+            </div>
+        </div>
     </header>
 
-    <section class="projects-grid">
-        
-        <div class="card">
-            <div>
-                <span class="tag" style="color: #a78bfa;">IA & UX Design</span>
-                <h3 class="title-reuni">Reuni.ai</h3>
-                <p>Protótipo de SaaS para gestão de reuniões com IA. Focado em automação de atas e experiência do usuário.</p>
-            </div>
-            <a href="https://www.figma.com/proto/W8HtM2DGUeHWCAe2vPwPrM/Reuni.ai" target="_blank" class="btn">Ver Protótipo →</a>
+    <section class="max-w-6xl mx-auto py-20 px-6 lg:grid lg:grid-cols-2 lg:gap-16">
+        <div>
+            <h2 class="text-3xl font-bold mb-6 text-slate-800 border-b-4 border-blue-600 inline-block">Sobre Mim</h2>
+            <p class="text-slate-600 leading-relaxed text-lg mb-6">
+                Desenvolvedor em formação focado em <strong>Análise e Desenvolvimento de Sistemas</strong>. Unindo background em Multimídia com lógica de programação para entregar soluções digitais eficientes e centradas no usuário.
+            </p>
         </div>
-
-        <div class="card">
-            <div>
-                <span class="tag" style="color: #f87171;">Angular Framework</span>
-                <h3 class="title-angular">Floricultura E-commerce</h3>
-                <p>Aplicação completa em Angular com sistema de carrinho, componentes dinâmicos e simulação de backend.</p>
+        <div class="grid grid-cols-2 gap-4">
+            <div class="p-5 bg-white shadow-sm rounded-xl border-l-4 border-blue-600">
+                <h3 class="font-bold text-slate-800 mb-1 italic text-sm">Backend & Dados</h3>
+                <p class="text-xs text-slate-500">Java, Python, SQL, MongoDB</p>
             </div>
-            <a href="https://github.com/" target="_blank" class="btn">Ver Código no GitHub →</a>
-        </div>
-
-        <div class="card">
-            <div>
-                <span class="tag" style="color: #fb7185;">UI Redesign</span>
-                <h3 class="title-design">Drudge Report</h3>
-                <p>Estudo de caso de redesign focado em modernização de portal de notícias e hierarquia visual.</p>
+            <div class="p-5 bg-white shadow-sm rounded-xl border-l-4 border-cyan-500">
+                <h3 class="font-bold text-slate-800 mb-1 italic text-sm">Design & Frontend</h3>
+                <p class="text-xs text-slate-500">UI/UX, Figma, Angular</p>
             </div>
-            <a href="https://www.figma.com/proto/H1iijpK2AcR6j9pZucTv6J/Redesign-Drudge-Report" target="_blank" class="btn">Ver Redesign →</a>
-        </div>
-
-        <div class="card">
-            <div>
-                <span class="tag" style="color: #fbbf24;">Game Development</span>
-                <h3 class="title-game">Quebrando LeBron James</h3>
-                <p>Web game focado em lógica de programação, mecânicas de plataforma e pixel art original.</p>
+            <div class="p-5 bg-white shadow-sm rounded-xl border-l-4 border-indigo-500">
+                <h3 class="font-bold text-slate-800 mb-1 italic text-sm">Business Strategy</h3>
+                <p class="text-xs text-slate-500">Branding & Corporate Design</p>
             </div>
-            <a href="https://baleslalala.itch.io/quebrando-lebron-james" target="_blank" class="btn">Jogar Agora →</a>
-        </div>
-
-        <div class="card">
-            <div>
-                <span class="tag" style="color: #34d399;">Branding & Design</span>
-                <h3 class="title-corp">Apresentação Bio Ritmo</h3>
-                <p>Criação de identidade visual e material de apresentação estratégica para o setor corporativo.</p>
+            <div class="p-5 bg-white shadow-sm rounded-xl border-l-4 border-orange-500">
+                <h3 class="font-bold text-slate-800 mb-1 italic text-sm">Game Dev</h3>
+                <p class="text-xs text-slate-500">Logic & Pixel Art</p>
             </div>
-            <a href="https://www.canva.com/design/DAG-Yfjla3w/jEhJRjMRxjQBL4PUYWtqBA/view?utm_content=DAG-Yfjla3w&utm_campaign=designshare&utm_medium=link2&utm_source=uniquelinks&utlId=h81e1b1d74e" target="_blank" class="btn">Ver Apresentação →</a>
         </div>
-
     </section>
 
-    <footer>
-        <p>Desenvolvido por Thales Lopes — 2026</p>
-        <p style="margin-top: 10px;">
-            <a href="https://linkedin.com/in/" target="_blank" style="color: var(--accent); text-decoration: none;">LinkedIn</a> | 
-            <a href="https://github.com/" target="_blank" style="color: var(--accent); text-decoration: none;">GitHub</a>
-        </p>
+    <section id="projetos" class="bg-slate-100 py-20 px-6">
+        <div class="max-w-6xl mx-auto">
+            <h2 class="text-4xl font-bold text-slate-900 mb-16 text-center italic">Portfólio de Projetos</h2>
+            
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                
+                <article class="bg-white rounded-2xl overflow-hidden shadow-sm project-card">
+                    <div class="h-44 bg-blue-600 flex items-center justify-center text-white"><i class="fa-solid fa-boxes-stacked text-5xl"></i></div>
+                    <div class="p-6 flex flex-col flex-grow">
+                        <h3 class="font-bold text-xl mb-2">Fiscalizei 📦</h3>
+                        <p class="text-slate-600 text-sm mb-4 flex-grow italic">Sistema de gestão logística para CD's. Foco em arquitetura de dados e agilidade operacional.</p>
+                        <a href="https://www.figma.com/design/gHxxX2Y1NukW2UAEfddo4w/Fiscalizei?node-id=3-18&t=bls7RAKNWlmYjxAr-1" target="_blank" class="text-blue-600 font-bold text-xs hover:underline mt-auto">Ver Protótipo Figma →</a>
+                    </div>
+                </article>
+
+                <article class="bg-white rounded-2xl overflow-hidden shadow-sm project-card">
+                    <div class="h-44 bg-indigo-600 flex items-center justify-center text-white"><i class="fa-solid fa-robot text-5xl"></i></div>
+                    <div class="p-6 flex flex-col flex-grow">
+                        <h3 class="font-bold text-xl mb-2">Reuni.ai 🤖</h3>
+                        <p class="text-slate-600 text-sm mb-4 flex-grow italic">SaaS para gestão de atas e reuniões com IA. Foco em UX e automação corporativa.</p>
+                        <a href="https://www.figma.com/proto/W8HtM2DGUeHWCAe2vPwPrM/Reuni.ai?node-id=6-1071&starting-point-node-id=3%3A34&t=yP5vGHtEoGfy8RBx-1" target="_blank" class="text-indigo-600 font-bold text-xs hover:underline mt-auto">Ver Protótipo Figma →</a>
+                    </div>
+                </article>
+
+                <article class="bg-white rounded-2xl overflow-hidden shadow-sm project-card">
+                    <div class="h-44 bg-rose-500 flex items-center justify-center text-white"><i class="fa-solid fa-leaf text-5xl"></i></div>
+                    <div class="p-6 flex flex-col flex-grow">
+                        <h3 class="font-bold text-xl mb-2">Hanami Floricultura 🌸</h3>
+                        <p class="text-slate-600 text-sm mb-4 flex-grow italic">E-commerce completo focado em experiência de compra visual em Angular.</p>
+                        <a href="https://github.com/thalesconstruct-sketch/ProjetoFloricultura" target="_blank" class="text-rose-600 font-bold text-xs hover:underline mt-auto">Ver Código no GitHub →</a>
+                    </div>
+                </article>
+
+                <article class="bg-white rounded-2xl overflow-hidden shadow-sm project-card">
+                    <div class="h-44 bg-orange-500 flex items-center justify-center text-white"><i class="fa-solid fa-gamepad text-5xl"></i></div>
+                    <div class="p-6 flex flex-col flex-grow">
+                        <h3 class="font-bold text-xl mb-2">LeBron Break 🏀</h3>
+                        <p class="text-slate-600 text-sm mb-4 flex-grow italic">Web game focado em lógica de programação e pixel art original autoral.</p>
+                        <a href="https://baleslalala.itch.io/quebrando-lebron-james" target="_blank" class="text-orange-600 font-bold text-xs hover:underline mt-auto">Jogar no Itch.io →</a>
+                    </div>
+                </article>
+
+                <article class="bg-white rounded-2xl overflow-hidden shadow-sm project-card">
+                    <div class="h-44 bg-slate-700 flex items-center justify-center text-white"><i class="fa-solid fa-newspaper text-5xl"></i></div>
+                    <div class="p-6 flex flex-col flex-grow">
+                        <h3 class="font-bold text-xl mb-2">Drudge Redesign 📰</h3>
+                        <p class="text-slate-600 text-sm mb-4 flex-grow italic">Estudo de caso de redesenho de portal focado em legibilidade e hierarquia visual.</p>
+                        <span class="bg-slate-100 text-slate-500 text-[10px] font-bold px-2 py-1 rounded self-start uppercase tracking-widest mt-auto">Documentação em progresso</span>
+                    </div>
+                </article>
+
+                <article class="bg-white rounded-2xl overflow-hidden shadow-sm project-card">
+                    <div class="h-44 bg-yellow-400 flex items-center justify-center text-white"><i class="fa-solid fa-chart-line text-5xl"></i></div>
+                    <div class="p-6 flex flex-col flex-grow">
+                        <h3 class="font-bold text-xl mb-2">Bio Ritmo Strategy ⚡</h3>
+                        <p class="text-slate-600 text-sm mb-4 flex-grow italic">Design estratégico de apresentação executiva e branding corporativo.</p>
+                        <a href="https://www.canva.com/design/DAG-Yfjla3w/jEhJRjMRxjQBL4PUYWtqBA/view?utm_content=DAG-Yfjla3w&utm_campaign=designshare&utm_medium=link2&utm_source=uniquelinks&utlId=h81e1b1d74e" target="_blank" class="text-yellow-700 font-bold text-xs hover:underline mt-auto">Visualizar no Canva →</a>
+                    </div>
+                </article>
+
+            </div>
+        </div>
+    </section>
+
+    <footer class="py-20 text-center bg-white border-t border-slate-200">
+        <div class="flex justify-center gap-8 mb-8">
+            <a href="https://github.com/thalesconstruct-sketch" target="_blank" class="text-slate-900 hover:text-blue-600 text-3xl transition"><i class="fa-brands fa-github"></i></a>
+            <a href="https://www.linkedin.com/in/thales-lopes-a1397b245" target="_blank" class="text-slate-900 hover:text-blue-600 text-3xl transition"><i class="fa-brands fa-linkedin"></i></a>
+        </div>
+        <p class="text-slate-400 text-sm">© 2026 • Thales Lopes • São Paulo, SP</p>
     </footer>
-</div>
 
 </body>
 </html>
