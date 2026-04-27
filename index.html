@@ -4,28 +4,29 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Thales Lopes | Portfólio Tech & Design</title>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
     <style>
-        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap');
         body { font-family: 'Inter', sans-serif; scroll-behavior: smooth; }
-        .gradient-bg { background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%); }
-        .project-card { transition: all 0.3s ease; border: 1px solid #e5e7eb; display: flex; flex-direction: column; height: 100%; background: white; border-radius: 1rem; overflow: hidden; }
-        .project-card:hover { transform: translateY(-8px); border-color: #3b82f6; box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1); }
         .problem-text { color: #dc2626; font-weight: 600; }
         .solution-text { color: #16a34a; font-weight: 600; }
     </style>
 </head>
 <body class="bg-slate-50 text-slate-900">
 
-    <header class="gradient-bg text-white py-24 px-6 text-center">
+    <header class="bg-gradient-to-br from-slate-950 to-slate-800 text-white py-24 px-6 text-center">
         <div class="max-w-4xl mx-auto">
             <h1 class="text-5xl md:text-7xl font-extrabold mb-6 tracking-tight">Thales Lopes</h1>
             <p class="text-xl md:text-2xl text-blue-300 font-light mb-10 text-balance">
                 Cursando ADS | Multimídia Designer | Consultor de Vendas Junior
             </p>
             <div class="flex flex-wrap justify-center gap-4">
-                <a href="#projetos" class="bg-blue-600 hover:bg-blue-700 text-white px-8 py-4 rounded-full font-bold transition-all shadow-lg shadow-blue-900/20">Ver Projetos</a>
+                <a href="#projetos" class="bg-blue-600 hover:bg-blue-700 text-white px-8 py-4 rounded-full font-bold transition-all shadow-lg active:scale-95">Ver Projetos</a>
                 <a href="https://www.linkedin.com/in/thales-lopes-a1397b245" target="_blank" class="border border-slate-500 hover:bg-white hover:text-slate-900 px-8 py-4 rounded-full font-bold transition-all">LinkedIn</a>
             </div>
         </div>
@@ -35,23 +36,23 @@
         <div>
             <h2 class="text-3xl font-bold mb-6 text-slate-800 border-b-4 border-blue-600 inline-block">Sobre Mim</h2>
             <p class="text-slate-600 leading-relaxed text-lg mb-6">
-                Desenvolvedor em formação focado em <strong>Análise e Desenvolvimento de Sistemas</strong>. Unindo background em Multimídia com lógica de programação para entregar soluções digitais eficientes, criativas e centradas no usuário.
+                Desenvolvedor em formação focado em <strong>Análise e Desenvolvimento de Sistemas</strong>. Unindo background em Multimídia com lógica de programação para entregar soluções digitais eficientes e centradas no usuário.
             </p>
         </div>
         <div class="grid grid-cols-2 gap-4">
-            <div class="p-5 bg-white shadow-sm rounded-xl border-l-4 border-blue-600">
+            <div class="p-5 bg-white shadow-sm rounded-xl border-l-4 border-blue-600 hover:shadow-md transition-shadow">
                 <h3 class="font-bold text-slate-800 mb-1 italic text-sm">Backend & Dados</h3>
                 <p class="text-xs text-slate-500">Java, Python, SQL, MongoDB</p>
             </div>
-            <div class="p-5 bg-white shadow-sm rounded-xl border-l-4 border-cyan-500">
+            <div class="p-5 bg-white shadow-sm rounded-xl border-l-4 border-cyan-500 hover:shadow-md transition-shadow">
                 <h3 class="font-bold text-slate-800 mb-1 italic text-sm">Design & Frontend</h3>
                 <p class="text-xs text-slate-500">UI/UX, Figma, Angular</p>
             </div>
-            <div class="p-5 bg-white shadow-sm rounded-xl border-l-4 border-indigo-500">
+            <div class="p-5 bg-white shadow-sm rounded-xl border-l-4 border-indigo-500 hover:shadow-md transition-shadow">
                 <h3 class="font-bold text-slate-800 mb-1 italic text-sm">Business Strategy</h3>
                 <p class="text-xs text-slate-500">Branding & Corporate Design</p>
             </div>
-            <div class="p-5 bg-white shadow-sm rounded-xl border-l-4 border-orange-500">
+            <div class="p-5 bg-white shadow-sm rounded-xl border-l-4 border-orange-500 hover:shadow-md transition-shadow">
                 <h3 class="font-bold text-slate-800 mb-1 italic text-sm">Game Dev</h3>
                 <p class="text-xs text-slate-500">Logic & Pixel Art</p>
             </div>
@@ -64,81 +65,87 @@
             
             <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
                 
-                <article class="project-card">
-                    <div class="h-44 bg-indigo-600 flex items-center justify-center text-white"><i class="fa-solid fa-robot text-5xl"></i></div>
+                <article class="group bg-white border border-slate-200 rounded-2xl overflow-hidden hover:shadow-2xl hover:border-indigo-500 transition-all duration-300 flex flex-col h-full hover:-translate-y-2">
+                    <div class="h-44 overflow-hidden bg-slate-200">
+                        <img src="./assetsport/Reuni.ai.png" alt="Reuni.ai" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                    </div>
                     <div class="p-6 flex flex-col flex-grow">
                         <h3 class="font-bold text-xl mb-3">Reuni.ai 🤖</h3>
                         <div class="text-slate-600 text-sm space-y-2 mb-4 flex-grow">
-                            <p><span class="problem-text">🚨 Problema:</span> Baixa retenção de conteúdo e desorganização em atas de reuniões digitais.</p>
-                            <p><span class="solution-text">💡 Solução:</span> SaaS que utiliza IA para sintetizar discussões e automatizar a gestão de encontros.</p>
-                            <p><strong>⚙️ Estratégia:</strong> UX minimalista focado em produtividade corporativa.</p>
+                            <p><span class="problem-text">🚨 Problema:</span> Baixa retenção de conteúdo e desorganização.</p>
+                            <p><span class="solution-text">💡 Solução:</span> SaaS com IA para sintetizar discussões.</p>
                         </div>
-                        <a href="https://www.figma.com/proto/W8HtM2DGUeHWCAe2vPwPrM/Reuni.ai?node-id=6-1071&starting-point-node-id=3%3A34&t=yP5vGHtEoGfy8RBx-1" target="_blank" class="text-indigo-600 font-bold text-xs hover:underline mt-auto">Ver Protótipo Figma →</a>
+                        <a href="https://www.figma.com/proto/W8HtM2DGUeHWCAe2vPwPrM/Reuni.ai?node-id=6-1071" target="_blank" class="text-indigo-600 font-bold text-xs group-hover:translate-x-2 transition-transform duration-300 flex items-center gap-2">Ver Protótipo Figma <i class="fa-solid fa-arrow-right"></i></a>
                     </div>
                 </article>
 
-                <article class="project-card">
-                    <div class="h-44 bg-yellow-400 flex items-center justify-center text-white"><i class="fa-solid fa-chart-line text-5xl"></i></div>
+                <article class="group bg-white border border-slate-200 rounded-2xl overflow-hidden hover:shadow-2xl hover:border-yellow-400 transition-all duration-300 flex flex-col h-full hover:-translate-y-2">
+                    <div class="h-44 overflow-hidden bg-slate-200">
+                        <img src="assetsport/Bio Ritmo Strategy.png" alt="Bio Ritmo" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                    </div>
                     <div class="p-6 flex flex-col flex-grow">
                         <h3 class="font-bold text-xl mb-3">Bio Ritmo Strategy ⚡</h3>
                         <div class="text-slate-600 text-sm space-y-2 mb-4 flex-grow">
-                            <p><span class="problem-text">🚨 Problema:</span> Dificuldade de engajamento do usuário com dados biométricos complexos.</p>
-                            <p><span class="solution-text">💡 Solução:</span> Apresentação estratégica e branding focado em visualização intuitiva de progresso.</p>
-                            <p><strong>⚙️ Estratégia:</strong> UI Emocional aplicada à saúde e bem-estar.</p>
+                            <p><span class="problem-text">🚨 Problema:</span> Engajamento baixo com dados biométricos.</p>
+                            <p><span class="solution-text">💡 Solução:</span> Branding focado em visualização intuitiva.</p>
                         </div>
-                        <a href="https://www.canva.com/design/DAG-Yfjla3w/jEhJRjMRxjQBL4PUYWtqBA/view?utm_content=DAG-Yfjla3w&utm_campaign=designshare&utm_medium=link2&utm_source=uniquelinks&utlId=h81e1b1d74e" target="_blank" class="text-yellow-700 font-bold text-xs hover:underline mt-auto">Visualizar no Canva →</a>
+                        <a href="https://www.canva.com/design/DAG-Yfjla3w/jEhJRjMRxjQBL4PUYWtqBA/view" target="_blank" class="text-yellow-700 font-bold text-xs group-hover:translate-x-2 transition-transform duration-300 flex items-center gap-2">Visualizar no Canva <i class="fa-solid fa-arrow-right"></i></a>
                     </div>
                 </article>
 
-                <article class="project-card">
-                    <div class="h-44 bg-blue-600 flex items-center justify-center text-white"><i class="fa-solid fa-boxes-stacked text-5xl"></i></div>
+                <article class="group bg-white border border-slate-200 rounded-2xl overflow-hidden hover:shadow-2xl hover:border-blue-600 transition-all duration-300 flex flex-col h-full hover:-translate-y-2">
+                    <div class="h-44 overflow-hidden bg-slate-200">
+                        <img src="./assetsport/Fiscalizei.png" alt="Fiscalizei" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                    </div>
                     <div class="p-6 flex flex-col flex-grow">
                         <h3 class="font-bold text-xl mb-3">Fiscalizei 📦</h3>
                         <div class="text-slate-600 text-sm space-y-2 mb-4 flex-grow">
-                            <p><span class="problem-text">🚨 Problema:</span> Gargalos operacionais e erros de conferência em centros de distribuição.</p>
-                            <p><span class="solution-text">💡 Solução:</span> Sistema logístico com foco em arquitetura de dados e agilidade operacional.</p>
-                            <p><strong>⚙️ Estratégia:</strong> Otimização de fluxo de trabalho backend e interface funcional.</p>
+                            <p><span class="problem-text">🚨 Problema:</span> Gargalos operacionais em logística.</p>
+                            <p><span class="solution-text">💡 Solução:</span> Sistema focado em agilidade operacional.</p>
                         </div>
-                        <a href="https://www.figma.com/design/gHxxX2Y1NukW2UAEfddo4w/Fiscalizei?node-id=3-18&t=bls7RAKNWlmYjxAr-1" target="_blank" class="text-blue-600 font-bold text-xs hover:underline mt-auto">Ver Protótipo Figma →</a>
+                        <a href="https://www.figma.com/design/gHxxX2Y1NukW2UAEfddo4w/Fiscalizei?node-id=3-18" target="_blank" class="text-blue-600 font-bold text-xs group-hover:translate-x-2 transition-transform duration-300 flex items-center gap-2">Ver Protótipo Figma <i class="fa-solid fa-arrow-right"></i></a>
                     </div>
                 </article>
 
-                <article class="project-card">
-                    <div class="h-44 bg-rose-500 flex items-center justify-center text-white"><i class="fa-solid fa-leaf text-5xl"></i></div>
+                <article class="group bg-white border border-slate-200 rounded-2xl overflow-hidden hover:shadow-2xl hover:border-rose-500 transition-all duration-300 flex flex-col h-full hover:-translate-y-2">
+                    <div class="h-44 overflow-hidden bg-slate-200">
+                        <img src="./assetsport/Hanami.png" alt="Hanami" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                    </div>
                     <div class="p-6 flex flex-col flex-grow">
                         <h3 class="font-bold text-xl mb-3">Hanami Floricultura 🌸</h3>
                         <div class="text-slate-600 text-sm space-y-2 mb-4 flex-grow">
-                            <p><span class="problem-text">🚨 Problema:</span> Interfaces de e-commerce saturadas que prejudicam a experiência estética.</p>
-                            <p><span class="solution-text">💡 Solução:</span> E-commerce em Angular com foco em design minimalista e imersão cultural.</p>
-                            <p><strong>⚙️ Estratégia:</strong> Hierarquia visual e navegação fluida baseada em espaços negativos.</p>
+                            <p><span class="problem-text">🚨 Problema:</span> Interfaces saturadas em e-commerce.</p>
+                            <p><span class="solution-text">💡 Solução:</span> Minimalismo e imersão cultural em Angular.</p>
                         </div>
-                        <a href="https://github.com/thalesconstruct-sketch/ProjetoFloricultura" target="_blank" class="text-rose-600 font-bold text-xs hover:underline mt-auto">Ver Código no GitHub →</a>
+                        <a href="https://github.com/thalesconstruct-sketch/ProjetoFloricultura" target="_blank" class="text-rose-600 font-bold text-xs group-hover:translate-x-2 transition-transform duration-300 flex items-center gap-2">Ver no GitHub <i class="fa-solid fa-arrow-right"></i></a>
                     </div>
                 </article>
 
-                <article class="project-card">
-                    <div class="h-44 bg-orange-500 flex items-center justify-center text-white"><i class="fa-solid fa-gamepad text-5xl"></i></div>
+                <article class="group bg-white border border-slate-200 rounded-2xl overflow-hidden hover:shadow-2xl hover:border-orange-500 transition-all duration-300 flex flex-col h-full hover:-translate-y-2">
+                    <div class="h-44 overflow-hidden bg-slate-200">
+                        <img src="./assetsport/Quebrando LBJ.png" alt="LeBron Break" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                    </div>
                     <div class="p-6 flex flex-col flex-grow">
                         <h3 class="font-bold text-xl mb-3">LeBron Break 🏀</h3>
                         <div class="text-slate-600 text-sm space-y-2 mb-4 flex-grow">
-                            <p><span class="problem-text">🚨 Problema:</span> Falta de interatividade em campanhas de marketing digital para o público jovem.</p>
-                            <p><span class="solution-text">💡 Solução:</span> Web game autoral unindo lógica de programação e pixel art de alto impacto.</p>
-                            <p><strong>⚙️ Estratégia:</strong> Gamificação como ferramenta de conexão entre marca e usuário.</p>
+                            <p><span class="problem-text">🚨 Problema:</span> Baixa interatividade em campanhas digitais.</p>
+                            <p><span class="solution-text">💡 Solução:</span> Web game autoral com pixel art.</p>
                         </div>
-                        <a href="https://baleslalala.itch.io/quebrando-lebron-james" target="_blank" class="text-orange-600 font-bold text-xs hover:underline mt-auto">Jogar no Itch.io →</a>
+                        <a href="https://baleslalala.itch.io/quebrando-lebron-james" target="_blank" class="text-orange-600 font-bold text-xs group-hover:translate-x-2 transition-transform duration-300 flex items-center gap-2">Jogar no Itch.io <i class="fa-solid fa-arrow-right"></i></a>
                     </div>
                 </article>
 
-                <article class="project-card">
-                    <div class="h-44 bg-slate-800 flex items-center justify-center text-white"><i class="fa-solid fa-newspaper text-5xl"></i></div>
+                <article class="group bg-white border border-slate-200 rounded-2xl overflow-hidden hover:shadow-2xl hover:border-slate-800 transition-all duration-300 flex flex-col h-full hover:-translate-y-2">
+                    <div class="h-44 overflow-hidden bg-slate-200">
+                        <img src="./assetsport/Drudge.png" alt="Drudge Redesign" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                    </div>
                     <div class="p-6 flex flex-col flex-grow">
                         <h3 class="font-bold text-xl mb-3">Drudge Redesign 📰</h3>
                         <div class="text-slate-600 text-sm space-y-2 mb-4 flex-grow">
-                            <p><span class="problem-text">🚨 Problema:</span> Fadiga visual e desorganização crônica no portal de notícias original.</p>
-                            <p><span class="solution-text">💡 Solução:</span> Redesign total focado em grids modernos e clareza tipográfica.</p>
-                            <p><strong>⚙️ Estratégia:</strong> Protótipo de alta fidelidade com foco em usabilidade mobile.</p>
+                            <p><span class="problem-text">🚨 Problema:</span> Fadiga visual e desorganização de dados.</p>
+                            <p><span class="solution-text">💡 Solução:</span> Grids modernos e clareza tipográfica.</p>
                         </div>
-                        <a href="https://www.figma.com/proto/H1iijpK2AcR6j9pZucTv6J/Redesign-Drudge-Report?node-id=36-73&starting-point-node-id=36%3A73" target="_blank" class="text-slate-900 font-bold text-xs hover:underline mt-auto">Explorar Protótipo Navegável →</a>
+                        <a href="https://www.figma.com/proto/H1iijpK2AcR6j9pZucTv6J/Redesign-Drudge-Report?node-id=36-73" target="_blank" class="text-slate-900 font-bold text-xs group-hover:translate-x-2 transition-transform duration-300 flex items-center gap-2">Explorar Protótipo <i class="fa-solid fa-arrow-right"></i></a>
                     </div>
                 </article>
 
@@ -148,8 +155,8 @@
 
     <footer class="py-20 text-center bg-white border-t border-slate-200">
         <div class="flex justify-center gap-8 mb-8">
-            <a href="https://github.com/thalesconstruct-sketch" target="_blank" class="text-slate-900 hover:text-blue-600 text-3xl transition"><i class="fa-brands fa-github"></i></a>
-            <a href="https://www.linkedin.com/in/thales-lopes-a1397b245" target="_blank" class="text-slate-900 hover:text-blue-600 text-3xl transition"><i class="fa-brands fa-linkedin"></i></a>
+            <a href="https://github.com/thalesconstruct-sketch" target="_blank" class="text-slate-900 hover:text-blue-600 text-3xl transition-all hover:scale-110"><i class="fa-brands fa-github"></i></a>
+            <a href="https://www.linkedin.com/in/thales-lopes-a1397b245" target="_blank" class="text-slate-900 hover:text-blue-600 text-3xl transition-all hover:scale-110"><i class="fa-brands fa-linkedin"></i></a>
         </div>
         <p class="text-slate-400 text-sm">© 2026 • Thales Lopes • São Paulo, SP</p>
     </footer>
