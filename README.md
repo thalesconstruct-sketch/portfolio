@@ -138,7 +138,7 @@ Durante o desenvolvimento deste projeto pratiquei:
 ## 📬 Contato
 
 - GitHub: https://github.com/thalesconstruct-sketch
-- LinkedIn: https://www.linkedin.com/in/SEU-LINKEDIN
+- LinkedIn: https://www.linkedin.com/in/thales-lopes-a1397b245/
 - Portfólio: https://thalesconstruct-sketch.github.io/portfolio/
 
 ---
