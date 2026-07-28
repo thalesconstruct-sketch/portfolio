@@ -2,18 +2,21 @@
 
 # 💼 Portfólio | Thales
 
-Meu portfólio pessoal desenvolvido para apresentar meus projetos, habilidades e evolução como desenvolvedor de software.
+Portfólio pessoal desenvolvido para apresentar meus projetos, habilidades e evolução como desenvolvedor de software.
 
-🔗 **Acesse o projeto:**  
-<https://thalesconstruct-sketch.github.io/portfolio/>
+<p>
+  <a href="https://thalesconstruct-sketch.github.io/portfolio/" target="_blank">
+    <img src="https://img.shields.io/badge/🌐_Acessar_Portfólio-4285F4?style=for-the-badge" alt="Acessar Portfólio"/>
+  </a>
+</p>
 
-<br>
-
-![HTML5](https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white)
-![CSS3](https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white)
-![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black)
-![Tailwind CSS](https://img.shields.io/badge/Tailwind_CSS-06B6D4?style=for-the-badge&logo=tailwindcss&logoColor=white)
-![GitHub Pages](https://img.shields.io/badge/GitHub_Pages-121013?style=for-the-badge&logo=github&logoColor=white)
+<p>
+  <img src="https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white"/>
+  <img src="https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white"/>
+  <img src="https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black"/>
+  <img src="https://img.shields.io/badge/Tailwind_CSS-06B6D4?style=for-the-badge&logo=tailwindcss&logoColor=white"/>
+  <img src="https://img.shields.io/badge/GitHub_Pages-121013?style=for-the-badge&logo=github&logoColor=white"/>
+</p>
 
 </div>
 
@@ -33,7 +36,7 @@ Este repositório contém o código-fonte do meu portfólio pessoal.
 
 O projeto foi desenvolvido para reunir minhas principais experiências, projetos e habilidades em um único lugar, permitindo que recrutadores e outros desenvolvedores conheçam melhor meu trabalho.
 
-Além da apresentação dos projetos, o portfólio também demonstra minha preocupação com organização, responsividade e experiência do usuário.
+Além de apresentar meus projetos, este portfólio demonstra meus conhecimentos em desenvolvimento front-end, responsividade, organização de código e boas práticas de interface.
 
 ---
 
@@ -42,10 +45,9 @@ Além da apresentação dos projetos, o portfólio também demonstra minha preoc
 - ✅ Página inicial com apresentação profissional
 - ✅ Seção "Sobre Mim"
 - ✅ Exibição dos principais projetos
-- ✅ Links para GitHub e LinkedIn
 - ✅ Layout responsivo
 - ✅ Navegação intuitiva
-- ✅ Interface moderna
+- ✅ Links para GitHub, LinkedIn e contato
 
 ---
 
@@ -84,19 +86,19 @@ portfolio/
 
 # 🚀 Como executar
 
-Clone o repositório:
+1. Clone este repositório:
 
 ```bash
 git clone https://github.com/thalesconstruct-sketch/portfolio.git
 ```
 
-Entre na pasta do projeto:
+2. Acesse a pasta do projeto:
 
 ```bash
 cd portfolio
 ```
 
-Abra o arquivo `index.html` no navegador.
+3. Abra o arquivo **index.html** em seu navegador.
 
 ---
 
@@ -104,16 +106,16 @@ Abra o arquivo `index.html` no navegador.
 
 Durante o desenvolvimento deste projeto pratiquei:
 
-- Estruturação semântica em HTML;
-- Organização de layouts responsivos;
-- Criação de interfaces modernas;
+- Estruturação semântica com HTML5;
+- Desenvolvimento de interfaces responsivas;
+- Organização de código;
+- Boas práticas de UI/UX;
 - Versionamento com Git e GitHub;
-- Publicação utilizando GitHub Pages;
-- Organização de projetos para portfólio.
+- Publicação utilizando GitHub Pages.
 
 ---
 
-# 🎯 Próximas melhorias
+# 🚀 Próximas melhorias
 
 - [ ] Adicionar novos projetos
 - [ ] Criar versão em inglês
@@ -121,30 +123,32 @@ Durante o desenvolvimento deste projeto pratiquei:
 - [ ] Melhorar acessibilidade
 - [ ] Adicionar animações
 - [ ] Integrar formulário de contato
-- [ ] Adicionar página individual para cada projeto
+- [ ] Criar páginas individuais para os projetos
 
 ---
 
 # 👨‍💻 Autor
 
-**Thales**
+**Thales Lopes**
 
 🎓 Estudante de Análise e Desenvolvimento de Sistemas
 
-💻 Desenvolvedor em formação
+💻 Desenvolvedor de Software em formação
 
 ---
 
-## 📬 Contato
+# 📬 Contato
 
-- GitHub: https://github.com/thalesconstruct-sketch
-- LinkedIn: https://www.linkedin.com/in/thales-lopes-a1397b245/
-- Portfólio: https://thalesconstruct-sketch.github.io/portfolio/
+- 🐙 **GitHub:** [thalesconstruct-sketch](https://github.com/thalesconstruct-sketch)
+- 💼 **LinkedIn:** [Thales Lopes](https://www.linkedin.com/in/thales-lopes-a1397b245/)
+- 🌐 **Portfólio:** <https://thalesconstruct-sketch.github.io/portfolio/>
 
 ---
 
 <div align="center">
 
-⭐ Se este projeto foi útil ou interessante para você, considere deixar uma estrela no repositório.
+### ⭐ Gostou do projeto?
+
+Se este projeto foi útil ou interessante para você, considere deixar uma estrela no repositório.
 
 </div>
